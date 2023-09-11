@@ -12,15 +12,20 @@ import java.util.logging.Logger;
 public class Main {
 
 	private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+
+	private static final String CATALOG_NAME = "hive_metastore";
+	private static final String SCHEMA_NAME = "test_schema_debug";
+	private static final String TABLE_NAME = "difference_cluster_vs_warehouse";
+
 	private static final String SQL_QUERY =
 			"SELECT \n"
 			+ " ARRAY_AGG(DISTINCT COALESCE(`T0`.`date`, '1970-01-01')) AS `distinct_date`\n"
 			+ "FROM \n"
-			+ " `hive_metastore`.`test_resources_v1`.`sales` AS T0";
+			+ " `" + CATALOG_NAME + "`.`" + SCHEMA_NAME + "`.`" + TABLE_NAME + "` AS T0";
 
 
 	private static final String SERVER_HOSTNAME = System.getenv("DATABRICKS_SERVER_HOSTNAME");
-	private static final String HTTP_PATH_CLUSTER = System.getenv("DATABRICKS_HTTP_PATH");
+	private static final String HTTP_PATH_CLUSTER = System.getenv("DATABRICKS_HTTP_PATH_CLUSTER");
 
 	private static final String HTTP_PATH_WAREHOUSE = System.getenv("DATABRICKS_HTTP_PATH_WAREHOUSE");
 
@@ -53,7 +58,7 @@ public class Main {
 				final PreparedStatement statement = connection.prepareStatement(SQL_QUERY);
 				final ResultSet resultSet = statement.executeQuery()) {
 			while (resultSet.next()) {
-				LOGGER.info(resultSet.getObject("distinct_date").toString());
+				System.out.println(resultSet.getObject("distinct_date"));
 			}
 		}
 	}
