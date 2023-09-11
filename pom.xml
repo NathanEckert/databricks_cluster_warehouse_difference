@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.activeviam.databricks</groupId>
+  <artifactId>databricks-example-cluster-vs-warehouse</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <organization>
+    <name>ActiveViam</name>
+    <url>http://www.activeviam.com</url>
+  </organization>
+
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+    <databricks-jdbc.version>2.6.34</databricks-jdbc.version>
+  </properties>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.databricks</groupId>
+      <artifactId>databricks-jdbc</artifactId>
+      <version>${databricks-jdbc.version}</version>
+    </dependency>
+  </dependencies>
+</project>
