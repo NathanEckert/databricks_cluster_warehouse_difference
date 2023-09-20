@@ -69,15 +69,6 @@
             <configuration>
               <argLine>
                 --add-opens java.base/java.nio=ALL-UNNAMED
-                --add-opens java.management/java.lang.management=ALL-UNNAMED
-                --add-opens=java.management/sun.management=ALL-UNNAMED
-                --add-opens java.base/java.util=ALL-UNNAMED
-                --add-opens java.base/java.util.concurrent=ALL-UNNAMED
-                --add-opens java.base/java.time.format=ALL-UNNAMED
-                --add-opens java.base/java.time.temporal=ALL-UNNAMED
-                --add-opens java.base/java.time=ALL-UNNAMED
-                --add-opens java.base/java.lang=ALL-UNNAMED
-                --add-opens java.logging/java.util.logging=ALL-UNNAMED
               </argLine>
             </configuration>
           </plugin>
