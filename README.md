@@ -2,7 +2,7 @@
 
 ## Environment
 
-Maven, `mvn --version`:
+- Maven, `mvn --version`:
 
 ```
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
@@ -11,6 +11,8 @@ Java version: 11.0.17, vendor: Eclipse Adoptium, runtime: /home/nec/.sdkman/cand
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
 ```
+
+- Databricks cluster version: 13.3 LTS
 
 ## Steps to reproduce
 
