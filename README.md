@@ -34,7 +34,12 @@ OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
   - `DATABRICKS_AUTH_TOKEN`
 - Select your java version and run `mvn --version` to be sure 
 - Build the project with `mvn clean install` 
-- Run `mvn exec:java -Dexec.mainClass="com.activeviam.databricks.clustervswarehouse.Main"`
+- Run:
+  - Java 11: `mvn exec:java -Dexec.mainClass="com.activeviam.databricks.clustervswarehouse.Main"`
+  - Java 17: `MAVEN_OPTS="--add-opens java.base/java.nio=ALL-UNNAMED" mvn exec:java -Dexec.mainClass="com.activeviam.databricks.clustervswarehouse.Main"`
 
-Observe the difference in the output: `["2021-07-21","2021-07-20","2021-07-19"]` on cluster vs `[2021-07-20,2021-07-19,2021-07-21]` on warehouse.
+Observe the difference in the output:
+- cluster: `["2021-07-21","2021-07-20","2021-07-19"]`
+- warehouse: `[2021-07-20,2021-07-19,2021-07-21]`
+
 On Databricks warehouse, the lack of quotation marks does not allow proper object parsing.

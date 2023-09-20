@@ -14,9 +14,7 @@
   <properties>
     <databricks-jdbc.version>2.6.34</databricks-jdbc.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
   </properties>
-
 
   <dependencies>
     <dependency>
@@ -60,16 +58,6 @@
             <configuration>
               <source>17</source>
               <target>17</target>
-            </configuration>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${maven-surefire-plugin.version}</version>
-            <configuration>
-              <argLine>
-                --add-opens java.base/java.nio=ALL-UNNAMED
-              </argLine>
             </configuration>
           </plugin>
         </plugins>
