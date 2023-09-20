@@ -13,7 +13,7 @@ OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
 ```
 
 - Tested also with Java 17: `mvn --version`:
-- 
+
 ```
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
 Maven home: /home/nec/.sdkman/candidates/maven/current
