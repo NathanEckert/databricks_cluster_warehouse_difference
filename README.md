@@ -2,7 +2,7 @@
 
 ## Environment
 
-- Tested with Java 11: `mvn --version`:
+- Tested on Linux with Java 11: `mvn --version`:
 
 ```
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
@@ -12,7 +12,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
 ```
 
-- Tested also with Java 17: `mvn --version`:
+- Tested on Linux with Java 17: `mvn --version`:
 
 ```
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
@@ -20,6 +20,26 @@ Maven home: /home/nec/.sdkman/candidates/maven/current
 Java version: 17.0.8.1, vendor: Eclipse Adoptium, runtime: /home/nec/.sdkman/candidates/java/17.0.8.1-tem
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
+```
+
+- Tested on Linux with Java 20: `mvn --version`:
+
+```
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /home/nec/.sdkman/candidates/maven/current
+Java version: 20.0.2, vendor: Eclipse Adoptium, runtime: /home/nec/.sdkman/candidates/java/20.0.2-tem
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
+```
+
+- Tested on Windows with Java 11: `mvn --version`:
+
+```
+Apache Maven 3.8.1 (05c21c65bdfed0f71a2f2ada8b84da59348c4c5d)
+Maven home: C:\ProgramData\chocolatey\lib\maven\apache-maven-3.8.1\bin\..
+Java version: 11.0.11, vendor: AdoptOpenJDK, runtime: C:\Users\Remy\.jdks\adopt-openjdk-11.0.11
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 ```
 
 - Databricks cluster version tested: 12.2 LTS and 13.3 LTS
