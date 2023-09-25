@@ -27,6 +27,16 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "6.2.0-32-generic", arch: "amd64", family: "unix"
 ```
 
+- Tested on Linux with Java 19: `mvn --version`:
+
+```
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /home/nec/.sdkman/candidates/maven/current
+Java version: 19-panama, vendor: Oracle Corporation, runtime: /home/nec/.sdkman/candidates/java/19.ea.1.pma-open
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.2.0-33-generic", arch: "amd64", family: "unix"
+```
+
 - Tested on Linux with Java 20: `mvn --version`:
 
 ```

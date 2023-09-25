@@ -51,17 +51,19 @@ public class Main {
 
 	public static void main(String[] args) throws SQLException {
 
-		LOGGER.info("Performing test on cluster");
+		LOGGER.info("Performing test on cluster with coalesce query");
 		generateTestCase(CONNECTION_STRING_CLUSTER, SQL_QUERY_WITH_COALESCE);
+		LOGGER.info("Performing test on cluster without coalesce query");
 		generateTestCase(CONNECTION_STRING_CLUSTER, SQL_QUERY_NO_COALESCE);
-		LOGGER.info("Performing test on warehouse");
+		LOGGER.info("Performing test on warehouse with coalesce query");
 		generateTestCase(CONNECTION_STRING_WAREHOUSE, SQL_QUERY_WITH_COALESCE);
+		LOGGER.info("Performing test on warehouse without coalesce query");
 		generateTestCase(CONNECTION_STRING_WAREHOUSE, SQL_QUERY_NO_COALESCE);
 
 	}
 
 	private static void generateTestCase(final String connectionString, final String query) throws SQLException {
-		LOGGER.info(() -> "Test for query " + query);
+
 		try (
 				final Connection connection = createConnection(connectionString);
 				final PreparedStatement statement = connection.prepareStatement(query);
