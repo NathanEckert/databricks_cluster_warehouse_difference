@@ -101,5 +101,24 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>java-21</id>
+      <activation>
+        <jdk>21</jdk>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven-compiler-plugin.version}</version>
+            <configuration>
+              <source>21</source>
+              <target>21</target>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>

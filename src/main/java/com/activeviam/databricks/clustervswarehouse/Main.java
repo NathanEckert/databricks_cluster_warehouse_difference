@@ -79,6 +79,9 @@ public class Main {
 	private static Connection createConnection(final String connectionString) throws SQLException {
 		final Properties jdbcProperties = new Properties();
 		jdbcProperties.setProperty("PWD", AUTH_TOKEN);
+		final boolean ansi_mode = true;
+		LOGGER.info(() -> "ANSI_MODE: " + ansi_mode);
+		jdbcProperties.setProperty("ANSI_MODE", String.valueOf(ansi_mode));
 
 		return DriverManager.getConnection(connectionString, jdbcProperties);
 	}
